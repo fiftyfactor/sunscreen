@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # regular updates for our established packages
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    target-branch: "main"
+    open-pull-requests-limit: 15
+  - package-ecosystem: "cargo"
+    directory: "/src-tauri/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    target-branch: "main"
